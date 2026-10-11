@@ -1,0 +1,37 @@
+SHARC stability code inputs still required
+
+WE HAVE
+- AR = 8
+- taper ratio = 0.60
+- takeoff weight = 27.5 lbf
+- wingspan = 12.65 ft
+- wing area = 20 ft^2
+- span efficiency = 0.80
+- altitude = 100 ft
+- nominal CG = 0.32 MAC
+- nominal wing aerodynamic center = 0.25 MAC
+- Clark Y geometry through clarky_airfoil.m
+
+Still required for a complete longitudinal stability calculation:
+1. Wing incidence, i_w [deg]
+2. Clark Y zero-lift angle of attack, alpha0_Lw [deg], preferably at the design Reynolds number
+3. Clark Y pitching moment about the aerodynamic center, CMac_w
+4. Horizontal-tail area, St [ft^2]
+5. Horizontal-tail moment arm from CG to tail AC, lt [ft]
+6. Horizontal-tail aspect ratio, AR_t
+7. Horizontal-tail span efficiency, e_t_span
+8. Tail effectiveness / dynamic-pressure ratio, eta_t
+9. Tail incidence, i_t [deg]
+10. Downwash gradient, d(epsilon)/d(alpha)
+11. Fuselage + float pitching-moment intercept, CMf0
+12. Fuselage + float pitching-moment slope, dCMf/dalpha [/deg]
+
+BETTER STAB CALC ALSO NEED
+- vertical-tail area and moment arm
+- vertical-tail lift-curve slope/effectiveness
+- fuselage side area / float side area
+- propeller/motor locations and thrust-line offsets
+- mass moments of inertia Ixx, Iyy, Izz, Ixz
+- control-surface geometry and control derivatives
+- CG range for different payload/probe/battery conditions
+- water configuration effects if assessing on-water directional stability
